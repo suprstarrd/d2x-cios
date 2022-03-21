@@ -163,7 +163,7 @@ if [ ! -z "${DIST}" ] && [ "${DIST}" != "dist" ]; then
 
 fi
 
-D2XBASENAME=d2xl-v${MAJOR_VERSION}-${MINOR_VERSION}
+D2XBASENAME=d2xl-v${MAJOR_VERSION}${MINOR_VERSION}
 export D2XBUILD=${D2XBASENAME}-Wii
 
 echo -----------------------------

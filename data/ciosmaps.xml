@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ciosmaps ciosgroupscount="4">
-	<ciosgroup name="d2xl-v${MAJOR_VER}-${MINOR_VER}-Wii" version="${IOS_REV}" basescount="11">
+	<ciosgroup name="d2xl-v${MAJOR_VER}${MINOR_VER}-Wii" version="${IOS_REV}" basescount="11">
 
 		<!-- WII IOS START -->
 
@@ -592,7 +592,7 @@
 	</ciosgroup>
 
 
-	<ciosgroup name="d2xl-v${MAJOR_VER}-${MINOR_VER}-vWii" version="${IOS_REV}" basescount="3">
+	<ciosgroup name="d2xl-v${MAJOR_VER}${MINOR_VER}-vWii" version="${IOS_REV}" basescount="3">
 		<!-- vWii IOS START -->
 			<base ios="56" version="5918" contentscount="23" modulescount="8" console="vwii">
 				<content id="0x0" patchscount="7">
@@ -753,7 +753,7 @@
 		<!-- vWii IOS END -->
 	</ciosgroup>
 
-	<ciosgroup name="d2xl-v${MAJOR_VER}-${MINOR_VER}-WiiMini-PAL" version="${IOS_REV}" basescount="1">
+	<ciosgroup name="d2xl-v${MAJOR_VER}${MINOR_VER}-WiiMini-PAL" version="${IOS_REV}" basescount="1">
 		<!-- WII MINI IOS START -->
 
 			<base ios="57" version="31776" contentscount="26" modulescount="8" console="mini" region="pal"> <!-- PAL version? -->
@@ -814,7 +814,7 @@
 			</base>
 	</ciosgroup>
 
-	<ciosgroup name="d2xl-v${MAJOR_VER}-${MINOR_VER}-WiiMini-NTSCU" version="${IOS_REV}" basescount="1">
+	<ciosgroup name="d2xl-v${MAJOR_VER}${MINOR_VER}-WiiMini-NTSCU" version="${IOS_REV}" basescount="1">
 			<base ios="57" version="31775" contentscount="26" modulescount="8" console="mini" region="ntscu">  <!-- Canada version -->
 				<content id="0x12" patchscount="7">		<!-- idx 0 -->
 					<patch offset="0x00" size="4"  originalbytes="0x66,0x69,0x72,0x6d" newbytes="0x1e,0xe7,0xc1,0x05"/>
