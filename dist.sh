@@ -18,6 +18,7 @@ cd ..
 timestamp=$(git log -1 --pretty=%ct)
 echo Timestamp is $timestamp
 export SOURCE_DATE_EPOCH=$timestamp 
-export D2XL_VER_COMPILE="v9.$(git log -1 --format=%cd --date=format:%y%m%d)"
-./maked2x.sh 9 .$(git log -1 --format=%cd --date=format:%y%m%d)
+MINOR_VERSION=.${GITHUB_RUN_NUMBER:-unknown}
+export D2XL_VER_COMPILE="v9${MINOR_VERSION}"
+./maked2x.sh 9 ${MINOR_VERSION}
 

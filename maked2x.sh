@@ -110,7 +110,7 @@ completed() {
 menu() {
         echo
         echo "Usage 1: $0 [<major_version> [<minor_version> [dist | DIST]]]"
-        echo "  It builds d2x with the specified major and minor version."
+        echo "  It builds d2xl with the specified major and minor version."
         echo "  Default values are \"999\" and \"unknown\" respectively."
         echo "  If option dist or DIST is specified then a zip file is generated, i.e. the"
         echo "  distribution package. Be aware that:"
@@ -141,7 +141,7 @@ export CLEAN=""
 export MAJOR_VERSION=$1
 [ -z "${MAJOR_VERSION}" ] && export MAJOR_VERSION="999"
 export MINOR_VERSION=$2
-[ -z "${MINOR_VERSION}" ] && export MINOR_VERSION="unknown"
+[ -z "${MINOR_VERSION}" ] && export MINOR_VERSION=".unknown"
 export DIST=$3
 
 # Check arguments
