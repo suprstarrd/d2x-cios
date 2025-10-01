@@ -1,7 +1,7 @@
 // Copyright 2009 Kwiirk based on negentig.c:
 // Copyright 2007,2008  Segher Boessenkool  <segher@kernel.crashing.org>
 // Licensed under the terms of the GNU GPL, version 2
-// http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+// https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
 #include "wiidisc.h"
 

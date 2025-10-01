@@ -1068,8 +1068,8 @@ s32 USBStorage_ReadCapacity(usbstorage_handle *dev, u8 lun, u32 *sector_size, u3
 
 	// FIX by digicroxx
 	// Specifications state that SCSI_READ_CAPACITY has a 10 byte long Command Descriptor Block.
-	// See page 32 at http://www.usb.org/developers/devclass_docs/usbmass-ufi10.pdf 
-	// and http://en.wikipedia.org/wiki/SCSI_Read_Capacity_Command
+	// See page 32 at https://www.usb.org/developers/devclass_docs/usbmass-ufi10.pdf 
+	// and https://en.wikipedia.org/wiki/SCSI_Read_Capacity_Command
 	// Certain devices strictly require this command lenght.
 	u8 cmd[] = {SCSI_READ_CAPACITY, lun << 5, 0, 0, 0, 0, 0, 0, 0, 0}; 
 	u8 *response = USB_Alloc(8);

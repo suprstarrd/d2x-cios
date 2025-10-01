@@ -161,7 +161,7 @@ int wbfs_disc_read(wbfs_disc_t*d,u32 offset, u8 *data, u32 len);
 /*! @return the number of discs inside the paritition */
 u32 wbfs_count_discs(wbfs_t*p);
 /*! get the disc info of ith disc inside the partition. It correspond to the first 0x100 bytes of the wiidvd
-  http://www.wiibrew.org/wiki/Wiidisc#Header
+  https://www.wiibrew.org/wiki/Wiidisc#Header
   @param i: index of the disc inside the partition
   @param header: pointer to 0x100 bytes to write the header
   @size: optional pointer to a 32bit word that will get the size in 32bit words of the DVD taken on the partition.

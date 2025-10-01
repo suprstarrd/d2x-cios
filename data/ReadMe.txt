@@ -34,7 +34,7 @@
   - If you're going to install a d2x vWii edition don't use ModMii. In this
     case use the d2x-cios-installer (see below).
   - Download and install ModMii v6.2.3 or higher on your PC. Download link:
-    http://gbatemp.net/topic/207126-modmii-for-windows
+    https://gbatemp.net/topic/207126-modmii-for-windows
   - From ModMii's Main Menu, enter "4", then "beta"
   - Select the d2x beta you want to build
   - Mark some or all d2x cIOSs for download (i.e. "d2x")
@@ -46,7 +46,7 @@
 
   - For vWii (Wii U) or Wii Mini, use d2x-cios-installer 2.2 Mod
   - For Wii, download the latest d2x-cios-installer from its google code page:
-    http://code.google.com/p/d2x-cios-installer/downloads/list
+    https://code.google.com/p/d2x-cios-installer/downloads/list
   - Extract it into the apps folder of your sd card or usb device
   - Extract d2x-v${MAJOR_VER}-${MINOR_VER}.zip on your sd card or usb device
     into the folder /apps/d2x-cios-installer.

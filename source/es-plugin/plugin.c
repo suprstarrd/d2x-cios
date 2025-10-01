@@ -15,7 +15,7 @@
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #include <stdio.h>
@@ -279,7 +279,7 @@ static s32 __ES_FixMissingTitle(s32 justCounting, ioctlv *vector, s32 ret)
 	if (count == NULL || tid == NULL)
 		return ret;
 
-	/* Check missing IOS for future fake launch, see bug http://code.google.com/p/d2x-cios/issues/detail?id=2 */
+	/* Check missing IOS for future fake launch, see bug https://code.google.com/p/d2x-cios/issues/detail?id=2 */
 	if (ret == expectedRet && *count == expectedCount) {
 		u32 tidh = (u32)(*tid >> 32);
 		u32 tidl = (u32) *tid;

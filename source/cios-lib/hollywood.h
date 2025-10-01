@@ -5,7 +5,7 @@ Copyright (C) 2008, 2009	Hector Martin "marcan" <marcan@marcansoft.com>
 Copyright (C) 2008, 2009	John Kelley <wiidev@kelley.ca>
 
 # This code is licensed to you under the terms of the GNU GPL, version 2;
-# see file COPYING or http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+# see file COPYING or https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 */
 
 #ifndef __HOLLYWOOD_H__

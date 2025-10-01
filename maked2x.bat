@@ -118,7 +118,7 @@ echo   Default values are "999" and "unknown" respectively.
 echo   If option dist or DIST is specified then a zip file is generated, i.e. the
 echo   distribution package. Be aware that:
 echo     - it may take several minutes  
-echo     - ModMii is required --^> http://gbatemp.net/topic/207126-modmii-for-windows
+echo     - ModMii is required --^> https://gbatemp.net/topic/207126-modmii-for-windows
 echo     - the MODMII environment variable must be set to ModMii install directory
 echo     - internet connection is required 
 echo   Contrary to DIST, the dist option removes the generated files from ModMii,
