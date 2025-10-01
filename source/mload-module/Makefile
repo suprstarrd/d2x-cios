@@ -20,6 +20,7 @@ ifdef SOURCE_DATE_EPOCH
 else
 	BUILD_DATE ?= $(shell date "+'%b %e %Y'")
 	BUILD_TIME ?= $(shell date "+'%H:%M:%S'")
+endif
 
 ifdef D2XL_VER_COMPILE
    D2XL_VER ?= $(D2XL_VER_COMPILE)
