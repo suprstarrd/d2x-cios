@@ -2,6 +2,27 @@
 | CHANGELOG |
 +-----------+
 
+[ d2x v11 beta3 ]
+
+- Fixed IOS38 version identification for Wii. It was originally set to the
+  wrong value 13 years ago.
+
+[ d2x v11 beta2 ]
+
+- Improved WiiWare & VC compatibility by using some MEM1 safe functions.
+- Improved game compatibility when using base IOS58 by ignoring encrypted
+  USB drives that are used for Wii U games.
+- Added base IOS38 v4380 support for vWii.
+- Enabled Korean key patching for vWii.
+- Fixed a typo that made the FAT module not reproducible.
+- Reduced memory usage for the EHCI module.
+
+[ d2x v11 beta1 ]
+
+- Fixed RiiConnect24 compatibility by removing the SDHC module and adding
+  the SDHC functions directly to the cIOS lib.
+- Added EmuNAND UStealth support thanks to airline38.
+
 [ d2xl v9 ]
 
 - Improved compatibility with certain drive/controller combinations when the
@@ -28,21 +49,6 @@
 
 - First Wii Mini cIOS. Created in September 2019 by Leseratte, by using a hex 
   editor to make it compatible. 
-
-[ d2x v11 ]
-
-- Fixed IOS38 version identification for Wii. It was originally set to the
-  wrong value 13 years ago.
-- Improved WiiWare & VC compatibility by using some MEM1 safe functions.
-- Improved game compatibility when using base IOS58 by ignoring encrypted
-  USB drives that are used for Wii U games.
-- Added base IOS38 v4380 support for vWii.
-- Enabled Korean key patching for vWii.
-- Fixed a typo that made the FAT module not reproducible.
-- Reduced memory usage for the EHCI module.
-- Fixed RiiConnect24 compatibility by removing the SDHC module and adding
-  the SDHC functions directly to the cIOS lib.
-- Added EmuNAND UStealth support thanks to airline38.
 
 [ d2x v10 ]
 
