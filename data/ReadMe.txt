@@ -48,7 +48,7 @@
   - For Wii, download the latest d2x-cios-installer from its google code page:
     http://code.google.com/p/d2x-cios-installer/downloads/list
   - Extract it into the apps folder of your sd card or usb device
-  - Extract d2x-v${MAJOR_VER}${MINOR_VER}.zip on your sd card or usb device
+  - Extract d2x-v${MAJOR_VER}-${MINOR_VER}.zip on your sd card or usb device
     into the folder /apps/d2x-cios-installer.
     NOTE: This will overwrite the file /apps/d2x-cios-installer/ciosmaps.xml
     possibly present in that folder. You might want to rename it before

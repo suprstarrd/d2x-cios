@@ -1,7 +1,7 @@
 FROM debian:buster
 MAINTAINER Leseratte
 
-# This Dockerfile uses the precompiled devkitARM r32 to compile the d2xl-cIOS
+# This Dockerfile uses the precompiled devkitARM r32 to compile the d2x-cIOS
 # Update and install a bunch of crap: 
 RUN apt-get update -y --force-yes && \
 apt-get install -y --force-yes \
