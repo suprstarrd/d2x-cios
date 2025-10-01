@@ -5,6 +5,7 @@
 	Copyright (C) 2010 Hermes.
 	Copyright (C) 2010 Waninkoko.
 	Copyright (C) 2011 davebaol.
+	Copyright (C) 2020 Leseratte.
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -69,7 +70,8 @@ s32 Detect_DipModule(void)
 		ios.dipVersion = 0x4F7AE650;
 		break;
 
-	case 0x20207EA8:		// IOS: 56v5661, 57v5918, 58v6175, 61v5661, 70v6687, 80v6943
+	case 0x20207EA8:		// IOS: 56v5661, 57v5918, 58v6175, 59v9249, 61v5661, 70v6687, 80v6943
+	 						// Mini IOS: 56v31519
 		/* DIP: 06/03/09 07:49:09 */
 		ios.dipVersion = 0x4A262AF5;
 		break;
@@ -110,8 +112,9 @@ s32 Detect_EsModule(void)
 
 	case 0x201015E9:
 	{
-		static moduleId esIds[2] = {
-			{0x2010B8D2, "03/03/10 10:40:14", 0x4B8E90EE},  //  IOS: 56v5661, 57v5918, 58v6175, 61v5661, 80v6943
+		#define ES_NUM 2
+		static moduleId esIds[ES_NUM] = {
+			{0x2010B8D2, "03/03/10 10:40:14", 0x4B8E90EE},  //  IOS: 56v5661, 57v5918, 58v6175, 59v9249, 61v5661, 80v6943;  Mini IOS: 56v31519
 			{0x2010BB2E, "04/02/12 14:00:51", 0x4F79B113}   // vIOS: 56v5918, 57v6175, 58v6432
 		};
 		
@@ -171,7 +174,8 @@ s32 Detect_FfsModule(void)
 		ios.ffsVersion = 0x4F7AE5D0;
 		break;
 
-	case 0x20006009:		// IOS: 56v5661, 57v5918, 58v6175, 60v6174, 61v5661, 70v6687, 80v6943 	
+	case 0x20006009:		// IOS: 56v5661, 57v5918, 58v6175, 59v9249, 60v6174, 61v5661, 70v6687, 80v6943 	
+							// Mini IOS: 56v31519
 		/* FFS: 11/24/08 15:36:10 */
 		ios.ffsVersion = 0x492AC9EA;
 		break;
@@ -229,13 +233,16 @@ s32 Detect_IopModule(void)
 		break;
 	}
 
-	case 0xFFFF1F20:	//               IOS: 60v6174, 70v6687, 56v5661, 57v5918, 58v6175, 61v5661, 80v6943
+	case 0xFFFF1F20:	//               IOS: 60v6174, 70v6687, 56v5661, 57v5918, 58v6175, 59v9249, 61v5661, 80v6943
 	                	//              vIOS: 56v5918, 57v6175, 58v6432
 	case 0xFFFF7B98:	// gecko patched IOS: 60v6174, 70v6687
 	case 0xFFFF7BD0:	// gecko patched IOS: 56v5661, 57v5918, 58v6175, 61v5661, 80v6943
 	{
-		static moduleId iospIds[3] = {
+		#define IOSP_NUM 5
+		static moduleId iospIds[IOSP_NUM] = {
 			{0xFFFF880B, "03/03/10 10:43:18", 0x4B8E3D46},  //  IOS: 56v5661, 57v5918, 58v6175, 61v5661, 80v6943
+			{0xFFFF880B, "10/18/11 13:05:12", 0x4E9D5D68},  //  IOS: 59v9249
+			{0xFFFF880B, "09/27/11 18:50:17", 0x4E821AE9},  //  Mini IOS 56v31519
 			{0xFFFF8693, "04/02/12 14:03:56", 0x4F79B1CC},  // vIOS: 56v5918, 57v6175, 58v6432
 			{0xFFFF87D3, "11/24/08 15:39:12", 0x492ACAA0}   //  IOS: 60v6174, 70v6687
 		};
@@ -244,6 +251,8 @@ s32 Detect_IopModule(void)
 
 		switch (ios.iopVersion) {
 		case 0x4B8E3D46:   // IOS: 56v5661, 57v5918, 58v6175, 61v5661, 80v6943
+		case 0x4E9D5D68:   // IOS: 59v9249
+		case 0x4E821AE9:   // Mini IOS 56v31519
 			ios.syscallBase = 0xFFFF93D0;
 			break;
 		case 0x4F79B1CC:   // vIOS: 56v5918, 57v6175

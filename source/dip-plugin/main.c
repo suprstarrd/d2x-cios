@@ -3,6 +3,7 @@
  *
  * Copyright (C) 2008-2010 Waninkoko, WiiGator.
  * Copyright (C) 2011 davebaol.
+ * Copyright (C) 2020 Leseratte.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +33,7 @@ int main(void)
 	static patcher patchers[] = {{Patch_DipModule, 0}};
 
 	/* Print info */
-	svc_write("$IOSVersion: DIPP: " __DATE__ " " __TIME__ " 64M$\n");
+	svc_write("$IOSVersion: DIPP:  " __DATE__ " " __TIME__ " 64M " __D2XL_VER__ " $\n");
 
 	/* Initialize plugin */
 	IOS_InitSystem(patchers, sizeof(patchers));

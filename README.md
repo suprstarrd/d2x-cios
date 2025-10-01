@@ -8,8 +8,9 @@
 
 #### DISCLAIMER
 ````
-THIS APPLICATION COMES WITH NO WARRANTY AT ALL, NEITHER EXPRESSED NOR IMPLIED.
-NO ONE BUT YOURSELF IS RESPONSIBLE FOR ANY DAMAGE TO YOUR WII CONSOLE BECAUSE OF A IMPROPER USAGE OF THIS SOFTWARE.
+  THIS APPLICATION COMES WITH NO WARRANTY AT ALL, NEITHER EXPRESSED NOR
+  IMPLIED. NO ONE BUT YOURSELF IS RESPONSIBLE FOR ANY DAMAGE TO YOUR WII
+  CONSOLE BECAUSE OF A IMPROPER USAGE OF THIS SOFTWARE.
 ````
 
 #### DESCRIPTION
@@ -46,4 +47,7 @@ NO ONE BUT YOURSELF IS RESPONSIBLE FOR ANY DAMAGE TO YOUR WII CONSOLE BECAUSE OF
  * *kwiirk*, for his EHCI module.
  * *Hermes*, for his EHCI improvements.
  * *neimod*, for his [Custom IOS Module Toolkit](http://wiibrew.org/wiki/Custom_IOS_Module_Toolkit).
+ * *xerpi*, for fakemote (wired ps3/ps4 controller support).
+ * *cyberstudio*, for 2-bay disk enclosure support.
+ * *GerbilSoft*, for code that checks disk signature and skips Wii U drives.
  * All the betatesters.

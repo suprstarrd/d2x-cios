@@ -8,9 +8,18 @@ PREFIX	=	$(DEVKITARM)/bin/arm-eabi-
 CC	=	$(PREFIX)gcc
 AR	=	$(PREFIX)ar
 
+# Date & Time
+ifdef SOURCE_DATE_EPOCH
+    BUILD_DATE ?= $(shell LC_ALL=C date -u -d "@$(SOURCE_DATE_EPOCH)" "+'%b %e %Y'" 2>/dev/null || LC_ALL=C date -u -r "$(SOURCE_DATE_EPOCH)" "+'%b %e %Y'" 2>/dev/null || LC_ALL=C date -u "+'%b %e %Y'")
+    BUILD_TIME ?= $(shell LC_ALL=C date -u -d "@$(SOURCE_DATE_EPOCH)" "+'%T'" 2>/dev/null || LC_ALL=C date -u -r "$(SOURCE_DATE_EPOCH)" "+'%T'" 2>/dev/null || LC_ALL=C date -u "+'%T'")
+else
+    BUILD_DATE ?= $(shell LC_ALL=C date "+'%b %e %Y'")
+    BUILD_TIME ?= $(shell LC_ALL=C date "+'%T'")
+endif
+
 # Flags
 ARCH	=	-mcpu=arm926ej-s -mthumb -mthumb-interwork -mbig-endian
-CFLAGS	=	$(ARCH) -I. -ffreestanding -fno-builtin -ffunction-sections -fomit-frame-pointer -Os -Wall -Wstrict-prototypes
+CFLAGS	=	$(ARCH) -I. -ffreestanding -fno-builtin -ffunction-sections -fomit-frame-pointer -Os -Wall -Wstrict-prototypes -Wno-builtin-macro-redefined
 ARFLAGS	=	rcs
 
 # Libraries

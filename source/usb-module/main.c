@@ -5,7 +5,9 @@
 	Copyright (C) 2009 WiiGator.
 	Copyright (C) 2009 Waninkoko.
 	Copyright (C) 2011 davebaol.
+	Copyright (C) 2020 Leseratte.
 	Copyright (C) 2022 blackb0x.
+	Copyright (C) 2022 cyberstudio.
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -43,7 +45,7 @@ s32 queuehandle = -1;
 
 /* Async replies */
 areply usbCb[2] = { { -1, -1 } };
-
+u32 current_drive = 0;	// support v9/v10-beta53-alt SET_PORT interface
 
 static s32 __USB_Ioctlv(u32 cmd, ioctlv *vector, u32 inlen, u32 iolen)
 {
@@ -121,6 +123,19 @@ static s32 __USB_Ioctlv(u32 cmd, ioctlv *vector, u32 inlen, u32 iolen)
 	case IOCTL_USB_UNMOUNT: {
 		/* Shutdown USB */
 		ret = !usbstorage_Shutdown();
+
+		break;
+	}
+
+	// 2022-03-07 SET_PORT of beta53-alt although now means LUN instead of USB port and is now applicable to base58 as well
+	case IOCTL_UMS_SET_DRIVE: {
+		u32 drive = *(u32 *)vector[0].data;
+
+		/* Set current LUN */
+		if (drive > 1)
+			ret = -1;
+		else
+			ret = current_drive = drive;
 
 		break;
 	}
@@ -228,7 +243,7 @@ int main(void)
 	s32 ret;
 
 	/* Print info */
-	svc_write("$IOSVersion: USBS: " __DATE__ " " __TIME__ " 64M$\n");
+	svc_write("$IOSVersion: USBS:  " __DATE__ " " __TIME__ " 64M " __D2XL_VER__ " $\n");
 
 	/* Initialize module */
 	ret = __USB_Initialize();

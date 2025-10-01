@@ -17,11 +17,16 @@ ifdef SOURCE_DATE_EPOCH
 else
 	BUILD_DATE ?= $(shell date "+'%b %e %Y'")
 	BUILD_TIME ?= $(shell date "+'%H:%M:%S'")
+
+ifdef D2XL_VER_COMPILE
+   D2XL_VER ?= $(D2XL_VER_COMPILE)
+else
+   D2XL_VER ?= "unknown"
 endif
 
 # Flags
 ARCH	=	-mcpu=arm926ej-s -mthumb -mthumb-interwork -mbig-endian
-CFLAGS	=	$(ARCH) -I. -I../cios-lib -ffreestanding -fno-builtin -ffunction-sections -fomit-frame-pointer -Os -Wall -Wstrict-prototypes -ffunction-sections -Wno-builtin-macro-redefined -D__TIME__=\"$(BUILD_TIME)\" -D__DATE__=\"$(BUILD_DATE)\"
+CFLAGS	=	$(ARCH) -I. -I../cios-lib -ffreestanding -fno-builtin -ffunction-sections -fomit-frame-pointer -Os -Wall -Wstrict-prototypes -ffunction-sections -Wno-builtin-macro-redefined -D__TIME__=\"$(BUILD_TIME)\" -D__DATE__=\"$(BUILD_DATE)\" -D__D2XL_VER__=\"$(D2XL_VER)\"
 LDFLAGS	=	$(ARCH) -nostartfiles -nostdlib -Wl,-T,link.ld,-Map,$(TARGET).map -Wl,--gc-sections -Wl,-static
 
 # Libraries
