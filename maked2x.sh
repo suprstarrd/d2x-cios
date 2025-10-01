@@ -32,8 +32,6 @@ make_modules() {
 
         # Replace variables in some files
         replace_vars ciosmaps.xml      build
-        replace_vars ciosmaps-vWii.xml build
-        replace_vars ciosmaps-mini.xml build
         replace_vars d2x-beta.bat      build/${D2XBUILD}
         replace_vars ReadMe.txt        build
 
@@ -66,8 +64,6 @@ make_modules() {
         mkdir -p dist/Support/d2x-beta
         cp build/${D2XBUILD}/*     dist/Support/d2x-beta
         cp build/ciosmaps.xml      dist/Support/d2x-beta
-        cp build/ciosmaps-vWii.xml dist/Support/d2x-beta
-        cp build/ciosmaps-mini.xml dist/Support/d2x-beta
         cp build/ReadMe.txt        dist/Support/d2x-beta
         cp build/Changelog.txt     dist/Support/d2x-beta
 
