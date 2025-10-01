@@ -1,7 +1,7 @@
-<p align="center"><a href="https://github.com/wiidev/d2x-cios/" title="d2x cIOS"><img src="assets/d2x-logo.jpg"></a></p>
+<p align="center"><a href="https://github.com/suprstarrd/d2x-cios/" title="d2x cIOS"><img src="assets/d2x-logo.jpg"></a></p>
 <p align="center">
-<a href="https://github.com/wiidev/d2x-cios/releases" title="Releases"><img src="https://img.shields.io/github/v/release/wiidev/d2x-cios?logo=github"></a>
-<a href="https://github.com/wiidev/d2x-cios/actions" title="Actions"><img src="https://img.shields.io/github/actions/workflow/status/wiidev/d2x-cios/main.yml?branch=master&logo=github"></a>
+<a href="https://github.com/suprstarrd/d2x-cios/releases" title="Releases"><img src="https://img.shields.io/github/v/release/suprstarrd/d2x-cios?logo=github"></a>
+<a href="https://github.com/suprstarrd/d2x-cios/actions" title="Actions"><img src="https://img.shields.io/github/actions/workflow/status/suprstarrd/d2x-cios/main.yml?branch=master&logo=github"></a>
 </p>
 <hr>
 
@@ -26,20 +26,20 @@
 
 #### DOCUMENTATION
 
-  For documentation and tutorials visit our [Wiki](https://github.com/wiidev/d2x-cios/wiki).
+  For documentation and tutorials visit our [Wiki](https://github.com/suprstarrd/d2x-cios/wiki).
 
 
 
 #### KUDOS
 
  * *rodries*, for the help with EHCI improvements.
- * *Crediar*, for all I learned studying [Sneek](http://code.google.com/p/sneek) source code.
+ * *Crediar*, for all I (davebaol) learned studying [Sneek](http://code.google.com/p/sneek) source code.
  * *Oggzee*, for his brilliant fraglist.
- * *WiiPower*, for the great help with ios reload block from usb.
+ * *WiiPower*, for the great help with IOS Reload block from USB.
  * *dragbe* and *NutNut*, for their [d2x cIOS Installer](http://code.google.com/p/d2x-cios-installer).
- * *XFlak*, for his wonderful [ModMii](http://gbatemp.net/topic/207126-modmii-for-windows) which supported d2x wads since its birth. Without ModMii d2x cIOS would probably never have existed. Also, XFlak had the original idea to replace the buggy EHCI module of cIOSX rev21 with the  working one from rev19. 
+ * *XFlak*, for his wonderful [ModMii](http://gbatemp.net/topic/207126-modmii-for-windows) which supported d2x WADs since its birth. Without ModMii, d2x cIOS would probably never have existed. Also, XFlak had the original idea to replace the buggy EHCI module of cIOSX rev21 with the working one from rev19. 
  * *[HackWii](http://www.hackwii.it)* and *[GBAtemp](http://www.gbatemp.net)* communities, for their ideas and support.
- * *Totoro*, for the official d2x logo
+ * *Totoro*, for the official d2x logo.
  * *ChaN*, for his [FatFs](http://elm-chan.org/fsw/ff/00index_e.html).
  * *Waninkoko*, for his cIOSX rev21.
  * *Team Twiizers* and *devkitPRO devs* for their great work in libogc.
@@ -47,7 +47,7 @@
  * *kwiirk*, for his EHCI module.
  * *Hermes*, for his EHCI improvements.
  * *neimod*, for his [Custom IOS Module Toolkit](http://wiibrew.org/wiki/Custom_IOS_Module_Toolkit).
- * *xerpi*, for fakemote (wired ps3/ps4 controller support).
+ * *xerpi*, for fakemote (wired PS3/PS4 controller support).
  * *cyberstudio*, for 2-bay disk enclosure support.
  * *GerbilSoft*, for code that checks disk signature and skips Wii U drives.
  * All the betatesters.
